@@ -31,7 +31,7 @@
     $num = $num/$num;
     $num = $num-10;
 
-    if ($num=66) {
+    if ($num==66) {
         echo "Vous avez atteint à 66 ! Felicitations !";
 }   else {
         echo "Reessayez";
