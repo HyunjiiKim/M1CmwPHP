@@ -6,10 +6,12 @@
     echo "Saisissez le duexième nombre: ";
     $nb2 = readline();
 
-    if($nb1>$nb2){
-        echo $nb1;
-    }
-    else{
-        echo $nb2;
+    function plusPetit($nb1,$nb2){
+        if($nb1>$nb2){
+            return $nb1;
+        }
+        else{
+            return $nb2;
+        }
     }
 ?>
