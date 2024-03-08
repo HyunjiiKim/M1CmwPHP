@@ -16,6 +16,7 @@ echo "Programme ecrit par $prenom $nom.\n";
 
 $date=date("d-m-Y");
 $time=date("h:i:s");
+
 echo "Nous somes le $date et il est $time \n";
 echo "Veuillez saisir le montant a payer: "; $montant = readline();
 echo "\n \n Vous devez fournir: \n";
@@ -29,18 +30,18 @@ echo "\n \n Vous devez fournir: \n";
 			$B200=floor(($montant%500)/200);
 			$B20=floor((($montant%500)%200)/20);
 			$P2=floor(((($montant%500)%200)%20)/2);
-			$P1C=100*($montant-($B500*500)-($B200*200)-($B20*20)-($P2*2));
+			$P1C=((($montant%500)%200)%20)%2;
 
-			echo "
-			$B500 billet(s) de 500 euros. \n
-	 		$B200 billet(s) de 200 euros. \n
-	 		$B20   billet(s) de 20 euros.\n
-	 		$P2    piece(s) de 2 euros. \n
-	 		$P1C  piece(s) de 1 centime(s).\n";
+			echo  
+					"$B500 billet(s) de 500 euros. \n
+					$B200 billet(s) de 200 euros. \n
+					$B20   billet(s) de 20 euros.\n
+					$P2     piece(s) de 2 euros. \n
+					$P1C  piece(s) de 1 centime(s).\n";
 
 			echo "Fin de Programme !";
 		}
-		else{echo "Erreur ! Saisissez un nombre entre 0 et 10 000 000 !";}
+		else{ echo "Erreur ! Saisissez un nombre !";}
 	}
 	else{echo "Erreur ! Saisissez un nombre !";}
 
