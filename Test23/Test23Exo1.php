@@ -19,14 +19,17 @@
 
 function remboursement($a,$b){
     if($b>700){
-        
-        return=$b-700;
+        $refund=$b-700;
+
         if($refund>$a){
-            return=$a;
+            return ($refund=$a);
+        }
+        else{
+            return $refund;
         }
     }
     else{
-        return=0;
+        return false;
     }
 }
 
@@ -40,7 +43,7 @@ echo "Saisissez la valeur de la voiture : \n";
 $valeur=readline();
 
 if(remboursement($valeur,$montant)){
-    echo "Pour les reparations qui vous ont coutees $montant euros, nous remboursons "; remboursement($valeur,$montant)
+    echo "Pour les reparations qui vous ont coutees $montant euros, nous remboursons "; echo remboursement($valeur,$montant); echo "euros !";
 }
 else{
     echo "Pour les réparations qui vous ont coutees $montant euros, nous ne remboursons rien !";
