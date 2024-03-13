@@ -45,7 +45,6 @@ echo "\n \n Vous devez fournir: \n";
 	}
 	else{echo "Erreur ! Saisissez un nombre !";}
 
-
 #d) Sachant que vous ne disposez que de billets de 500€, de 200€ et de 20€ ainsi que d e pièces de 2€ et de 1 centime,
 #   affichez le nombre de pièces et de billets que vous devez fournir pour payer le montnat à payer.
 # NB: Vous devez optimiser le nombre de billets et de pièces à donner !
