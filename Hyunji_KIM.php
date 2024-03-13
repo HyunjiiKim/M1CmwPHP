@@ -23,6 +23,7 @@ else{
         # Q3)
 
         $revR=$rev-$frais;
+        echo "le revenu reel est $revR euros.";
 
         # Q4)
 
@@ -34,6 +35,8 @@ else{
             $revF=$revR;
         }
 
+        echo "le revenu fiscal est $revF euros.";
+
         # Q5)
 
             function quotient_familial($revF,$nadult,$nenfant){
@@ -43,7 +46,6 @@ else{
                 }
                 elseif($QF<=26818){
                     return ($QF*0.14);
-
                 }
                 elseif($QF<=71899){
                     return ($QF*0.3);
