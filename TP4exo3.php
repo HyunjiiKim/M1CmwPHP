@@ -6,12 +6,19 @@ function divisiblepar3($n){
     if($n%3==0){
         return True;
     }
+    else{
+        return False;
+    }
 }
 
-$i=1;
-while(divisiblepar3($n)){
-    if($n>=154&&$n<=268){
-        echo divisiblepar3($n)"-";
-        $i++;
-    }    
+$n=1;
+while($n<=268){
+    $n++;
+    if($n>=154){
+        if(divisiblepar3($n)){
+          echo "$n-";
+        }
+    }
 }
+
+?>
